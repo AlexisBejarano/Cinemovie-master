@@ -31,6 +31,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
+        btnResenas = new javax.swing.JMenuItem();
         btnActor = new javax.swing.JRadioButtonMenuItem();
         btnPelicula = new javax.swing.JRadioButtonMenuItem();
 
@@ -57,9 +58,15 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\dell\\Downloads\\cine.png")); // NOI18N
-
         jMenu1.setText("Ingrese aqui:");
+
+        btnResenas.setText("Reseñas");
+        btnResenas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnResenasActionPerformed(evt);
+            }
+        });
+        jMenu1.add(btnResenas);
 
         btnActor.setSelected(true);
         btnActor.setText("Actores");
@@ -111,10 +118,16 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnActorActionPerformed
 
     private void btnPeliculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPeliculaActionPerformed
-       PeliculasLista peliculas = new PeliculasLista();
+        PeliculasLista peliculas = new PeliculasLista();
         peliculas.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnPeliculaActionPerformed
+
+    private void btnResenasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResenasActionPerformed
+        ResenasLista resenas = new ResenasLista();
+        resenas.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnResenasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -154,6 +167,7 @@ public class Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButtonMenuItem btnActor;
     private javax.swing.JRadioButtonMenuItem btnPelicula;
+    private javax.swing.JMenuItem btnResenas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
